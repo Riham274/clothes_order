@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "259593261281",
+    "project_id": "clothesorder-10e15",
+    "storage_bucket": "clothesorder-10e15.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259593261281:android:b30dae6c327c89fe4a27a0",
+        "android_client_info": {
+          "package_name": "com.example.clothes_order"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSedABHayDAObSeCwWzvILGp2QUE61wAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

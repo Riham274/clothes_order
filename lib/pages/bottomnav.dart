@@ -1,12 +1,8 @@
-
 import 'package:clothes_order/pages/home.dart';
 import 'package:clothes_order/pages/order.dart';
 import 'package:clothes_order/pages/profile.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-//import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-
-
-
 
 
 class BottomNav extends StatefulWidget {
@@ -17,10 +13,9 @@ class BottomNav extends StatefulWidget {
 }
 
 class _BottomNavState extends State<BottomNav> {
-  int currentTabIndex = 0;
-  late List<Widget> pages;
-  late Widget currentPage;
-  late Home homepage;
+  int currentTabIndex = 0; // رقم الصفحة الحالية (0 = home، 1 = order، 2 = profile)
+  late List<Widget> pages;   
+  late Home homepage; //object from each class(page)
   late Profile profile;
   late Order order;
 
@@ -35,11 +30,11 @@ class _BottomNavState extends State<BottomNav> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-     bottomNavigationBar: CurvedNavigationBar(
-          height: 65,
+     bottomNavigationBar: CurvedNavigationBar(  //عشان الشكل يكون منحني
+          height: 50,
           backgroundColor: Colors.white,
           color: Colors.black,
-          animationDuration: Duration(milliseconds: 500),
+          animationDuration: Duration(milliseconds: 500), //مدة الحركة لما انتقل بين الايقونات
           onTap: (int index) {
             setState(() {
               currentTabIndex = index;
@@ -63,7 +58,7 @@ class _BottomNavState extends State<BottomNav> {
             )
           ]
           ),
-    
+    body: pages[currentTabIndex], 
     );
   }
 }
